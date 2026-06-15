@@ -14,8 +14,6 @@ export function CartProvider({ children }) {
 useEffect(() => {
   localStorage.setItem('orders', JSON.stringify(orders))
 }, [orders])
-
-
   function addToCart(item) {
     setCart((c) => {
       const found = c.find((i) => i.id === item.id)
