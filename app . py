@@ -1,50 +1,5 @@
 import streamlit as st
 
-st.set_page_config(page_title="Product Help App", page_icon="📘")
+st.title("GrabNGo")
 
-st.title("📘 Product Help & Feedback App")
-
-product = st.selectbox(
-    "Select a product",
-    ["Jodo Solar Filter", "Educational Toy", "Learning Kit"]
-)
-
-st.header(f"How to use: {product}")
-
-if product == "Jodo Solar Filter":
-    st.write("""
-    1. Place the filter in sunlight.
-    2. Connect it properly.
-    3. Check if the indicator is working.
-    4. Clean it regularly.
-    """)
-
-elif product == "Educational Toy":
-    st.write("""
-    1. Open the toy carefully.
-    2. Read the age instructions.
-    3. Use it with the activity guide.
-    4. Store it safely after use.
-    """)
-
-else:
-    st.write("""
-    1. Open the learning kit.
-    2. Follow the step-by-step manual.
-    3. Watch the demo video.
-    4. Give feedback after using it.
-    """)
-
-st.divider()
-
-st.header("💬 Feedback Form")
-
-name = st.text_input("Your name")
-rating = st.slider("Rate the product", 1, 5)
-feedback = st.text_area("Write your feedback")
-
-if st.button("Submit Feedback"):
-    st.success("Thank you! Your feedback has been submitted.")
-    st.write("Name:", name)
-    st.write("Rating:", rating)
-    st.write("Feedback:", feedback)
+st.write("Hello World")
